@@ -11,7 +11,7 @@ git init
 git add .
 git commit -m "OmiCoreTumor v0.1.0 - CRC tumour-region mapping from H&E"
 git branch -M main
-git remote add origin https://github.com/<YOUR-ORG>/omicoretumor.git
+git remote add origin https://github.com/<YOUR-ORG>/omicoretumordetector.git
 git push -u origin main
 ```
 
@@ -54,7 +54,7 @@ If your GitHub org is not `OmiCore`, update the default URL in
 ```python
 BASE = os.environ.get(
     "OMICORETUMOR_WEIGHTS_URL",
-    "https://github.com/<YOUR-ORG>/omicoretumor/releases/download/v0.1.0",
+    "https://github.com/<YOUR-ORG>/omicoretumordetector/releases/download/v0.1.0",
 )
 ```
 
@@ -66,7 +66,7 @@ From a clean machine or fresh virtual environment:
 
 ```bash
 python -m venv /tmp/t && source /tmp/t/bin/activate
-pip install "git+https://github.com/<YOUR-ORG>/omicoretumor.git"
+pip install "git+https://github.com/<YOUR-ORG>/omicoretumordetector.git"
 python -c "
 from omicoretumor import TumorDetector
 det = TumorDetector.from_pretrained()   # must download and verify

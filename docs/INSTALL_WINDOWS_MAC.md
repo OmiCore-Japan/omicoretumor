@@ -8,7 +8,7 @@
 ```powershell
 python -m venv omicore-env
 omicore-env\Scripts\activate
-pip install "git+https://github.com/OmiCore-Japan/omicoretumor.git"
+pip install "git+https://github.com/OmiCore-Japan/omicoretumordetector.git"
 ```
 
 3. If you have an NVIDIA GPU:
@@ -27,7 +27,7 @@ whole section.
 ```bash
 python3 -m venv omicore-env
 source omicore-env/bin/activate
-pip install "git+https://github.com/OmiCore-Japan/omicoretumor.git"
+pip install "git+https://github.com/OmiCore-Japan/omicoretumordetector.git"
 ```
 
 ## Checking the install

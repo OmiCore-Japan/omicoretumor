@@ -579,7 +579,7 @@ histological variants or difficult non-neoplastic tissue.
 """)),
         ("h", "Availability"),
         ("mono", "pip install omicoretumor\n"
-                 "github.com/OmiCore-Japan/omicoretumor    Apache-2.0 (code)\n"
+                 "github.com/OmiCore-Japan/omicoretumordetector    Apache-2.0 (code)\n"
                  "Model: omicoretumor-crc-he-v0.1"),
     ])
 
@@ -777,7 +777,7 @@ including difficult non-neoplastic tissue.
 """)),
         ("h", "Data and code availability"),
         ("mono", "Package     pip install omicoretumor\n"
-                 "Source      github.com/OmiCore-Japan/omicoretumor  (Apache-2.0)\n"
+                 "Source      github.com/OmiCore-Japan/omicoretumordetector  (Apache-2.0)\n"
                  "Model       omicoretumor-crc-he-v0.1\n"
                  "Training    NCT-CRC-HE-100K  doi:10.5281/zenodo.1214456  CC-BY-4.0\n"
                  "            Kather-2016      doi:10.5281/zenodo.53169    CC-BY-4.0\n"

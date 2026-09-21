@@ -6,7 +6,7 @@ authors:
   - name: "OmiCore Inc."
 version: 0.1.0
 license: Apache-2.0
-repository-code: "https://github.com/OmiCore-Japan/omicoretumor"
+repository-code: "https://github.com/OmiCore-Japan/omicoretumordetector"
 keywords:
   - computational pathology
   - colorectal cancer

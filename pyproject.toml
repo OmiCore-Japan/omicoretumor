@@ -39,8 +39,8 @@ all = ["omicoretumor[viz,dev]"]
 omicoretumor = "omicoretumor.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/OmiCore-Japan/omicoretumor"
-Issues = "https://github.com/OmiCore-Japan/omicoretumor/issues"
+Homepage = "https://github.com/OmiCore-Japan/omicoretumordetector"
+Issues = "https://github.com/OmiCore-Japan/omicoretumordetector/issues"
 
 [tool.setuptools.packages.find]
 include = ["omicoretumor*"]

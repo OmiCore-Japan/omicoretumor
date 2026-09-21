@@ -12,7 +12,7 @@ from tqdm import tqdm
 
 BASE = os.environ.get(
     "OMICORETUMOR_WEIGHTS_URL",
-    "https://github.com/OmiCore-Japan/omicoretumor/releases/download/v0.1.0",
+    "https://github.com/OmiCore-Japan/omicoretumordetector/releases/download/v0.1.0",
 )
 
 #: name -> (filename, sha256). sha256 None disables verification.

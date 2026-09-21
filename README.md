@@ -28,14 +28,14 @@ This package is **not on PyPI**. Install it from this repository.
 ### Option A — install directly from GitHub (simplest)
 
 ```bash
-pip install "git+https://github.com/OmiCore-Japan/omicoretumor.git"
+pip install "git+https://github.com/OmiCore-Japan/omicoretumordetector.git"
 ```
 
 ### Option B — clone, then install
 
 ```bash
-git clone https://github.com/OmiCore-Japan/omicoretumor.git
-cd omicoretumor
+git clone https://github.com/OmiCore-Japan/omicoretumordetector.git
+cd omicoretumordetector
 pip install -e .
 ```
 
@@ -87,7 +87,7 @@ omicoretumor clear-cache   # delete them
 <summary>Offline or air-gapped machines</summary>
 
 Download the four `.pt` files from the
-[Releases page](https://github.com/OmiCore-Japan/omicoretumor/releases) on a connected
+[Releases page](https://github.com/OmiCore-Japan/omicoretumordetector/releases) on a connected
 machine, copy them across, then place them in the cache directory:
 
 ```bash
