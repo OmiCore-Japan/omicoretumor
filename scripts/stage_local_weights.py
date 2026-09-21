@@ -10,10 +10,10 @@ from pathlib import Path
 from omicoretumordetector import install_local
 
 MAP = {
-    "omicoretumor-crc-he-convnext-norm-v0.1": "A_convnext_norm/best.pt",
-    "omicoretumor-crc-he-convnext-nonorm-v0.1": "B_convnext_nonorm/best.pt",
-    "omicoretumor-crc-he-effnetv2-nonorm-v0.1": "C_effnet_nonorm/best.pt",
-    "omicoretumor-crc-he-seg-unet-v0.1": "seg_ebhi/best.pt",
+    "omicore-tumordetector-crc-he-convnext-norm-v0.1": "A_convnext_norm/best.pt",
+    "omicore-tumordetector-crc-he-convnext-nonorm-v0.1": "B_convnext_nonorm/best.pt",
+    "omicore-tumordetector-crc-he-effnetv2-nonorm-v0.1": "C_effnet_nonorm/best.pt",
+    "omicore-tumordetector-crc-he-seg-unet-v0.1": "seg_ebhi/best.pt",
 }
 
 root = Path(sys.argv[1] if len(sys.argv) > 1 else "models")

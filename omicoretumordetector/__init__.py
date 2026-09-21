@@ -4,7 +4,7 @@ RESEARCH USE ONLY. Not a diagnostic device; not validated for clinical use.
 
     from omicoretumordetector import TumorDetector
 
-    det = TumorDetector.from_pretrained("omicoretumor-crc-he-v0.1")
+    det = TumorDetector.from_pretrained("omicore-tumordetector-crc-he-v0.1")
     res = det.predict("slide.tiff", mpp=0.5)
     det.to_geojson(res, "tumor_regions.geojson", threshold=0.4)
 """

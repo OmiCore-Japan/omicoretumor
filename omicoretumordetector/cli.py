@@ -119,7 +119,7 @@ def main(argv=None):
                    help="microns per pixel of the input (models expect 0.5; "
                         "other values are rescaled)")
     r.add_argument("--model", default=None,
-                   help="model name (default: omicoretumor-crc-he-v0.1)")
+                   help="model name (default: omicore-tumordetector-crc-he-v0.1)")
     r.add_argument("--threshold", default="0.4",
                    help="float, or 'auto' (only for slides known to be tumour)")
     r.add_argument("--stride", type=int, default=None)

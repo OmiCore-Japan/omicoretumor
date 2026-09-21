@@ -30,13 +30,13 @@ GitHub allows 2 GB per release asset, so all four files fit comfortably.
 
 ```bash
 gh release create v0.1.0 \
-  release_assets/omicoretumor-crc-he-convnext-norm-v0.1.pt \
-  release_assets/omicoretumor-crc-he-convnext-nonorm-v0.1.pt \
-  release_assets/omicoretumor-crc-he-effnetv2-nonorm-v0.1.pt \
-  release_assets/omicoretumor-crc-he-seg-unet-v0.1.pt \
+  release_assets/omicore-tumordetector-crc-he-convnext-norm-v0.1.pt \
+  release_assets/omicore-tumordetector-crc-he-convnext-nonorm-v0.1.pt \
+  release_assets/omicore-tumordetector-crc-he-effnetv2-nonorm-v0.1.pt \
+  release_assets/omicore-tumordetector-crc-he-seg-unet-v0.1.pt \
   release_assets/SHA256SUMS.txt \
-  --title "omicoretumor-crc-he-v0.1" \
-  --notes "Model weights for omicoretumor-crc-he-v0.1. Research use only."
+  --title "omicore-tumordetector-crc-he-v0.1" \
+  --notes "Model weights for omicore-tumordetector-crc-he-v0.1. Research use only."
 ```
 
 **Or in the browser:** Releases → Draft a new release → tag `v0.1.0` → drag the
@@ -137,7 +137,7 @@ Use `__token__` as the username and the API token as the password, or put it in
 Bump `version` in `pyproject.toml` **and** `omicoretumordetector/__init__.py`, rebuild,
 re-upload. If the weights change, publish a new GitHub release, update `BASE` and
 the SHA-256 values in `weights.py`, and bump the model name (e.g.
-`omicoretumor-crc-he-v0.2`) so cached older weights are never silently mixed with
+`omicore-tumordetector-crc-he-v0.2`) so cached older weights are never silently mixed with
 newer code.
 
 ## Checklist

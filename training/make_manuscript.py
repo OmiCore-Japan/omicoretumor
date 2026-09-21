@@ -206,7 +206,7 @@ def figure1(pdf, d):
                 f"{r.get_width():+.1%}", va="center", fontsize=7.2, color=INK2)
     ax.grid(axis="y", visible=False)
 
-    fig.suptitle("Figure 1.  Construction and benchmarking of omicoretumor-crc-he-v0.1",
+    fig.suptitle("Figure 1.  Construction and benchmarking of omicore-tumordetector-crc-he-v0.1",
                  fontsize=11, fontweight="bold", y=0.975)
     fig.text(0.07, 0.085,
              "(a) Pipeline. (b) Class composition of the 100,000-tile training set. "
@@ -545,7 +545,7 @@ def page_title(pdf, d):
 Selecting tumour regions on haematoxylin and eosin (H&E) sections is a routine
 prerequisite for spatial-omics experiments, yet it is usually done by hand and is
 rarely reproducible between operators. We present OmiCoreTumorDetector
-(omicoretumor-crc-he-v0.1), an openly licensed model that maps tumour-enriched
+(omicore-tumordetector-crc-he-v0.1), an openly licensed model that maps tumour-enriched
 regions in colorectal H&E and exports them directly as QuPath-readable
 annotations.
 
@@ -580,7 +580,7 @@ histological variants or difficult non-neoplastic tissue.
         ("h", "Availability"),
         ("mono", "pip install omicoretumordetector\n"
                  "github.com/OmiCore-Japan/omicoretumordetector    Apache-2.0 (code)\n"
-                 "Model: omicoretumor-crc-he-v0.1"),
+                 "Model: omicore-tumordetector-crc-he-v0.1"),
     ])
 
 
@@ -778,7 +778,7 @@ including difficult non-neoplastic tissue.
         ("h", "Data and code availability"),
         ("mono", "Package     pip install omicoretumordetector\n"
                  "Source      github.com/OmiCore-Japan/omicoretumordetector  (Apache-2.0)\n"
-                 "Model       omicoretumor-crc-he-v0.1\n"
+                 "Model       omicore-tumordetector-crc-he-v0.1\n"
                  "Training    NCT-CRC-HE-100K  doi:10.5281/zenodo.1214456  CC-BY-4.0\n"
                  "            Kather-2016      doi:10.5281/zenodo.53169    CC-BY-4.0\n"
                  "            EBHI-SEG         doi:10.6084/m9.figshare.21540159  CC-BY-4.0\n"

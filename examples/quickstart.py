@@ -6,7 +6,7 @@ from omicoretumordetector import TumorDetector
 image = sys.argv[1] if len(sys.argv) > 1 else "colon_section.tiff"
 mpp = float(sys.argv[2]) if len(sys.argv) > 2 else 0.5
 
-det = TumorDetector.from_pretrained("omicoretumor-crc-he-v0.1")
+det = TumorDetector.from_pretrained("omicore-tumordetector-crc-he-v0.1")
 res = det.predict(image, mpp=mpp)
 
 print(f"tissue tiles : {res['n_tissue_tiles']:,}")

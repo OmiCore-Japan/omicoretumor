@@ -2,7 +2,7 @@
 
 **Tumour-region mapping for colorectal cancer H&E histopathology.**
 
-`omicoretumor-crc-he-v0.1` takes an H&E image of colon tissue and returns a
+`omicore-tumordetector-crc-he-v0.1` takes an H&E image of colon tissue and returns a
 per-tile tumour probability map, a binary tumour mask, and polygon annotations
 that open directly in QuPath.
 
@@ -92,7 +92,7 @@ machine, copy them across, then place them in the cache directory:
 
 ```bash
 mkdir -p ~/.cache/omicoretumordetector
-cp omicoretumor-crc-he-*.pt ~/.cache/omicoretumordetector/
+cp omicore-tumordetector-crc-he-*.pt ~/.cache/omicoretumordetector/
 omicoretumordetector models        # should now show [cached]
 ```
 
@@ -112,7 +112,7 @@ export OMICORETUMORDETECTOR_WEIGHTS_URL="file:///data/omicoretumordetector-weigh
 ```python
 from omicoretumordetector import TumorDetector
 
-det = TumorDetector.from_pretrained("omicoretumor-crc-he-v0.1")
+det = TumorDetector.from_pretrained("omicore-tumordetector-crc-he-v0.1")
 
 # mpp = microns per pixel of YOUR image.
 # The model expects 0.5; other values are rescaled automatically.

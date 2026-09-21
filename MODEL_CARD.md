@@ -1,10 +1,10 @@
-# Model card — omicoretumor-crc-he-v0.1
+# Model card — omicore-tumordetector-crc-he-v0.1
 
 ## Overview
 
 | | |
 |---|---|
-| Name | `omicoretumor-crc-he-v0.1` |
+| Name | `omicore-tumordetector-crc-he-v0.1` |
 | Task | Tumour-region mapping in colorectal H&E |
 | Output | 9-class tissue probabilities per 224 px tile; tumour mask; GeoJSON polygons |
 | Architecture | Ensemble of 3 classifiers, probability-averaged, with Macenko stain normalisation at inference |
