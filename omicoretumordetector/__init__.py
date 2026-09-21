@@ -2,7 +2,7 @@
 
 RESEARCH USE ONLY. Not a diagnostic device; not validated for clinical use.
 
-    from omicoretumor import TumorDetector
+    from omicoretumordetector import TumorDetector
 
     det = TumorDetector.from_pretrained("omicoretumor-crc-he-v0.1")
     res = det.predict("slide.tiff", mpp=0.5)

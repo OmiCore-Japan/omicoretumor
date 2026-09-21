@@ -71,16 +71,16 @@ Weights are ~400 MB and exceed GitHub's 100 MB per-file limit, so they are
 normally need to do anything:
 
 ```python
-from omicoretumor import TumorDetector
+from omicoretumordetector import TumorDetector
 det = TumorDetector.from_pretrained()   # downloads ~300 MB once, then cached
 ```
 
-Cached in `~/.cache/omicoretumor/` (override with `OMICORETUMOR_HOME`).
+Cached in `~/.cache/omicoretumordetector/` (override with `OMICORETUMORDETECTOR_HOME`).
 Downloads are SHA-256 verified.
 
 ```bash
-omicoretumor models        # list weights and show what is cached
-omicoretumor clear-cache   # delete them
+omicoretumordetector models        # list weights and show what is cached
+omicoretumordetector clear-cache   # delete them
 ```
 
 <details>
@@ -91,15 +91,15 @@ Download the four `.pt` files from the
 machine, copy them across, then place them in the cache directory:
 
 ```bash
-mkdir -p ~/.cache/omicoretumor
-cp omicoretumor-crc-he-*.pt ~/.cache/omicoretumor/
-omicoretumor models        # should now show [cached]
+mkdir -p ~/.cache/omicoretumordetector
+cp omicoretumor-crc-he-*.pt ~/.cache/omicoretumordetector/
+omicoretumordetector models        # should now show [cached]
 ```
 
 Or point the package at any URL or local mirror:
 
 ```bash
-export OMICORETUMOR_WEIGHTS_URL="file:///data/omicoretumor-weights"
+export OMICORETUMORDETECTOR_WEIGHTS_URL="file:///data/omicoretumordetector-weights"
 ```
 </details>
 
@@ -110,7 +110,7 @@ export OMICORETUMOR_WEIGHTS_URL="file:///data/omicoretumor-weights"
 ### Python
 
 ```python
-from omicoretumor import TumorDetector
+from omicoretumordetector import TumorDetector
 
 det = TumorDetector.from_pretrained("omicoretumor-crc-he-v0.1")
 
@@ -128,8 +128,8 @@ det.to_geojson(res, "tumor_regions.geojson", threshold=0.4)  # open in QuPath
 ### Command line
 
 ```bash
-omicoretumor predict slide.tiff --mpp 0.5 -o results/
-omicoretumor predict *.tiff --mpp 0.25 --stride 112 --save-heatmap -o results/
+omicoretumordetector predict slide.tiff --mpp 0.5 -o results/
+omicoretumordetector predict *.tiff --mpp 0.25 --stride 112 --save-heatmap -o results/
 ```
 
 ### Examples
@@ -227,13 +227,13 @@ tumour is present and **fabricates regions on tumour-free tissue** (it called
 ## 8. Repository contents
 
 ```
-omicoretumor/          the installable package
+omicoretumordetector/          the installable package
   api.py               TumorDetector: predict, tumor_mask, to_geojson
   inference.py         sliding-window tiling
   stain.py             Macenko normalisation
   ensemble.py          probability averaging
   weights.py           weight resolution, download, checksum
-  cli.py               `omicoretumor` command
+  cli.py               `omicoretumordetector` command
 examples/              runnable scripts
 tests/                 pytest suite (runs without weights)
 training/              full training + evaluation code, reproduces everything
@@ -260,7 +260,7 @@ bash training/run_experiments.sh
 |---|---|
 | `CUDA error` / `no kernel image` on RTX 50-series | install the cu128 PyTorch build (§1) |
 | `404` when downloading weights | no release published yet; see `PUBLISHING.md`, or stage weights manually (§2) |
-| `checksum mismatch` | partial download; `omicoretumor clear-cache` and retry |
+| `checksum mismatch` | partial download; `omicoretumordetector clear-cache` and retry |
 | Tumour found everywhere | `mpp` likely wrong, or threshold too low |
 | Nothing found on an obvious tumour | `mpp` likely wrong, or calibration shift — lower the threshold and inspect (§6) |
 | `image is NxN px ... smaller than one tile` | `mpp` wrong for this image |

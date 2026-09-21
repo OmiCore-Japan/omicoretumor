@@ -7,7 +7,7 @@ Use this to test the package before publishing weights as release assets.
 import sys
 from pathlib import Path
 
-from omicoretumor import install_local
+from omicoretumordetector import install_local
 
 MAP = {
     "omicoretumor-crc-he-convnext-norm-v0.1": "A_convnext_norm/best.pt",

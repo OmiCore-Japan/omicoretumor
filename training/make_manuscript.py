@@ -578,7 +578,7 @@ malignant cells, and it has not been shown to generalise across scanners,
 histological variants or difficult non-neoplastic tissue.
 """)),
         ("h", "Availability"),
-        ("mono", "pip install omicoretumor\n"
+        ("mono", "pip install omicoretumordetector\n"
                  "github.com/OmiCore-Japan/omicoretumordetector    Apache-2.0 (code)\n"
                  "Model: omicoretumor-crc-he-v0.1"),
     ])
@@ -776,7 +776,7 @@ across 20-50 unseen patients spanning scanners and histological variants,
 including difficult non-neoplastic tissue.
 """)),
         ("h", "Data and code availability"),
-        ("mono", "Package     pip install omicoretumor\n"
+        ("mono", "Package     pip install omicoretumordetector\n"
                  "Source      github.com/OmiCore-Japan/omicoretumordetector  (Apache-2.0)\n"
                  "Model       omicoretumor-crc-he-v0.1\n"
                  "Training    NCT-CRC-HE-100K  doi:10.5281/zenodo.1214456  CC-BY-4.0\n"

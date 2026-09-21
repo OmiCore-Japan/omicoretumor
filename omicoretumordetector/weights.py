@@ -11,7 +11,7 @@ import requests
 from tqdm import tqdm
 
 BASE = os.environ.get(
-    "OMICORETUMOR_WEIGHTS_URL",
+    "OMICORETUMORDETECTOR_WEIGHTS_URL",
     "https://github.com/OmiCore-Japan/omicoretumordetector/releases/download/v0.1.0",
 )
 
@@ -38,8 +38,8 @@ DEFAULT_MODEL = "omicoretumor-crc-he-v0.1"
 
 
 def cache_dir() -> Path:
-    d = Path(os.environ.get("OMICORETUMOR_HOME",
-                            Path.home() / ".cache" / "omicoretumor"))
+    d = Path(os.environ.get("OMICORETUMORDETECTOR_HOME",
+                            Path.home() / ".cache" / "omicoretumordetector"))
     d.mkdir(parents=True, exist_ok=True)
     return d
 
@@ -71,7 +71,7 @@ def fetch(name: str, progress: bool = True) -> Path:
         if r.status_code == 404:
             raise FileNotFoundError(
                 f"{url} returned 404. Publish the weights as release assets, or "
-                f"point OMICORETUMOR_WEIGHTS_URL at where they are hosted, or "
+                f"point OMICORETUMORDETECTOR_WEIGHTS_URL at where they are hosted, or "
                 f"pass explicit checkpoint paths to TumorDetector().")
         r.raise_for_status()
         total = int(r.headers.get("content-length", 0))

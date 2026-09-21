@@ -2,9 +2,9 @@
 import numpy as np
 import pytest
 
-import omicoretumor as ot
-from omicoretumor.inference import is_background, tile_grid
-from omicoretumor.stain import macenko_normalize, stain_matrix
+import omicoretumordetector as ot
+from omicoretumordetector.inference import is_background, tile_grid
+from omicoretumordetector.stain import macenko_normalize, stain_matrix
 
 
 def test_exports_and_classes():
@@ -78,7 +78,7 @@ def test_unknown_model_name_is_clear():
 def test_output_stems_never_collide():
     """Visium HD writes every sample to <sample>/segmentation/he_mpp0.5.tiff,
     so identical basenames must not overwrite each other's results."""
-    from omicoretumor.cli import _unique_stems
+    from omicoretumordetector.cli import _unique_stems
 
     paths = ["/d/Cancer_P2/segmentation/he_mpp0.5.tiff",
              "/d/Normal_P5/segmentation/he_mpp0.5.tiff",
@@ -90,5 +90,5 @@ def test_output_stems_never_collide():
 
 
 def test_single_file_keeps_plain_name():
-    from omicoretumor.cli import _unique_stems
+    from omicoretumordetector.cli import _unique_stems
     assert _unique_stems(["/x/slide.tif"])["/x/slide.tif"] == "slide"

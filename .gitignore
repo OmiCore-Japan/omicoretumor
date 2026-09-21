@@ -15,6 +15,6 @@ venv/
 .ruff_cache/
 
 # Outputs
-omicoretumor_out/
+omicoretumordetector_out/
 *.npz
 *.geojson

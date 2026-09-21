@@ -33,8 +33,8 @@ pip install "git+https://github.com/OmiCore-Japan/omicoretumordetector.git"
 ## Checking the install
 
 ```bash
-omicoretumor --version
-omicoretumor models
+omicoretumordetector --version
+omicoretumordetector models
 python -c "import torch; print('GPU:', torch.cuda.is_available())"
 ```
 
@@ -46,7 +46,7 @@ Export a region as TIFF/PNG first, or convert with OpenSlide:
 ```python
 import openslide, numpy as np
 from PIL import Image
-from omicoretumor import TumorDetector
+from omicoretumordetector import TumorDetector
 
 slide = openslide.OpenSlide("slide.svs")
 mpp = float(slide.properties["openslide.mpp-x"])     # the value to pass

@@ -3,7 +3,7 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "omicoretumor"
+name = "omicoretumordetector"
 version = "0.1.0"
 description = "Tumour-region mapping for colorectal cancer H&E histopathology. Research use only."
 readme = "README.md"
@@ -33,17 +33,17 @@ dependencies = [
 [project.optional-dependencies]
 viz = ["matplotlib>=3.6"]
 dev = ["pytest>=7", "ruff>=0.1"]
-all = ["omicoretumor[viz,dev]"]
+all = ["omicoretumordetector[viz,dev]"]
 
 [project.scripts]
-omicoretumor = "omicoretumor.cli:main"
+omicoretumordetector = "omicoretumordetector.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/OmiCore-Japan/omicoretumordetector"
 Issues = "https://github.com/OmiCore-Japan/omicoretumordetector/issues"
 
 [tool.setuptools.packages.find]
-include = ["omicoretumor*"]
+include = ["omicoretumordetector*"]
 
 [tool.ruff]
 line-length = 95

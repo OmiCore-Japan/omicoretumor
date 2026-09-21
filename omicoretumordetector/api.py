@@ -185,7 +185,7 @@ class TumorDetector:
                             "objectType": "annotation",
                             "classification": {"name": name, "colorRGB": -3670016},
                             "area_px": float(cv2.contourArea(cnt)),
-                            "model": "omicoretumor",
+                            "model": "omicoretumordetector",
                             "threshold": res.get("threshold_used", threshold),
                         },
                     })

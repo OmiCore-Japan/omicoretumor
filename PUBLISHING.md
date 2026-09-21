@@ -49,11 +49,11 @@ the package.
 ## 3. Point the package at your repository
 
 If your GitHub org is not `OmiCore`, update the default URL in
-`omicoretumor/weights.py`:
+`omicoretumordetector/weights.py`:
 
 ```python
 BASE = os.environ.get(
-    "OMICORETUMOR_WEIGHTS_URL",
+    "OMICORETUMORDETECTOR_WEIGHTS_URL",
     "https://github.com/<YOUR-ORG>/omicoretumordetector/releases/download/v0.1.0",
 )
 ```
@@ -68,7 +68,7 @@ From a clean machine or fresh virtual environment:
 python -m venv /tmp/t && source /tmp/t/bin/activate
 pip install "git+https://github.com/<YOUR-ORG>/omicoretumordetector.git"
 python -c "
-from omicoretumor import TumorDetector
+from omicoretumordetector import TumorDetector
 det = TumorDetector.from_pretrained()   # must download and verify
 print('OK', det.classes)
 "
@@ -88,13 +88,13 @@ If that succeeds, anyone can use the package.
 
 # Publishing to PyPI (optional)
 
-`pip install omicoretumor` instead of a git URL. The package metadata already
-passes `twine check`, and the name `omicoretumor` was free as of this writing.
+`pip install omicoretumordetector` instead of a git URL. The package metadata already
+passes `twine check`, and the name `omicoretumordetector` was free as of this writing.
 
 ## Do the GitHub release FIRST
 
 **Order matters.** The package downloads weights from your GitHub release. If you
-publish to PyPI before that release exists, every `pip install omicoretumor` user
+publish to PyPI before that release exists, every `pip install omicoretumordetector` user
 gets a package that 404s the moment they load a model.
 
 PyPI versions are **immutable** — you cannot re-upload `0.1.0` after fixing it.
@@ -121,8 +121,8 @@ python -m twine upload --repository testpypi dist/*
 
 python -m venv /tmp/tp && source /tmp/tp/bin/activate
 pip install --index-url https://test.pypi.org/simple/ \
-            --extra-index-url https://pypi.org/simple/ omicoretumor
-python -c "from omicoretumor import TumorDetector; print('ok')"
+            --extra-index-url https://pypi.org/simple/ omicoretumordetector
+python -c "from omicoretumordetector import TumorDetector; print('ok')"
 deactivate
 
 # 4. Publish for real
@@ -134,7 +134,7 @@ Use `__token__` as the username and the API token as the password, or put it in
 
 ## Releasing a new version later
 
-Bump `version` in `pyproject.toml` **and** `omicoretumor/__init__.py`, rebuild,
+Bump `version` in `pyproject.toml` **and** `omicoretumordetector/__init__.py`, rebuild,
 re-upload. If the weights change, publish a new GitHub release, update `BASE` and
 the SHA-256 values in `weights.py`, and bump the model name (e.g.
 `omicoretumor-crc-he-v0.2`) so cached older weights are never silently mixed with

@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
 
-from omicoretumor import TumorDetector
+from omicoretumordetector import TumorDetector
 
 Image.MAX_IMAGE_PIXELS = None
 folder = Path(sys.argv[1] if len(sys.argv) > 1 else ".")
@@ -17,7 +17,7 @@ mpp = float(sys.argv[2]) if len(sys.argv) > 2 else 0.5
 THR, DOWN = 0.4, 8
 
 det = TumorDetector.from_pretrained()
-out = Path("omicoretumor_out")
+out = Path("omicoretumordetector_out")
 out.mkdir(exist_ok=True)
 
 for img_path in sorted(list(folder.glob("*.tif")) + list(folder.glob("*.tiff"))):

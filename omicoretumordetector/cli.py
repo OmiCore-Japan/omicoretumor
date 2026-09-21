@@ -1,4 +1,4 @@
-"""Command line interface: omicoretumor <command>."""
+"""Command line interface: omicoretumordetector <command>."""
 import argparse
 import json
 import sys
@@ -108,7 +108,7 @@ def _clear(a):
 
 def main(argv=None):
     p = argparse.ArgumentParser(
-        prog="omicoretumor",
+        prog="omicoretumordetector",
         description="Tumour-region mapping for colorectal H&E. RESEARCH USE ONLY.")
     p.add_argument("--version", action="store_true")
     sub = p.add_subparsers(dest="cmd")
@@ -128,7 +128,7 @@ def main(argv=None):
     r.add_argument("--no-stain-norm", action="store_true")
     r.add_argument("--tta", action="store_true")
     r.add_argument("--save-heatmap", action="store_true")
-    r.add_argument("-o", "--out", default="omicoretumor_out")
+    r.add_argument("-o", "--out", default="omicoretumordetector_out")
     r.set_defaults(func=_predict)
 
     sub.add_parser("models", help="list available and cached weights").set_defaults(func=_models)
