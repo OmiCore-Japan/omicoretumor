@@ -534,8 +534,9 @@ def page_title(pdf, d):
     tum = [secs[s]["area"] for s, t in SECTIONS if t == "tumour"]
     nor = [secs[s]["area"] for s, t in SECTIONS if t == "normal"]
     text_page(pdf, [
-        ("title", "OmiCoreTumorDetector: an open, molecularly validated model for mapping\n"
-                  "tumour regions in colorectal cancer H&E sections"),
+        ("title", "OmiCoreTumorDetector: an open, molecularly\n"
+                  "validated model for mapping tumour regions\n"
+                  "in colorectal cancer H&E"),
         ("sub", "OmiCore Inc."),
         ("gap", "0.012"),
         ("p", W("Preprint. Research use only — not a medical device and not "
@@ -578,7 +579,7 @@ malignant cells, and it has not been shown to generalise across scanners,
 histological variants or difficult non-neoplastic tissue.
 """)),
         ("h", "Availability"),
-        ("mono", "pip install omicoretumordetector\n"
+        ("mono", 'pip install "git+https://github.com/OmiCore-Japan/omicoretumordetector.git"\n'
                  "github.com/OmiCore-Japan/omicoretumordetector    Apache-2.0 (code)\n"
                  "Model: omicore-tumordetector-crc-he-v0.1"),
     ])
@@ -766,6 +767,9 @@ the released threshold. Adenoma, dysplasia, inflammation, ulceration, necrosis,
 mucinous variants and treatment-altered tissue were not represented in
 evaluation, and a hard-negative analysis on such tissue is the natural next step.
 """)),
+    ], header="OmiCoreTumorDetector \u2014 preprint")
+
+    text_page(pdf, [
         ("h", "What would strengthen this"),
         ("p", W("""
 In order of value: independent pathologist annotation of invasive carcinoma on
@@ -776,7 +780,7 @@ across 20-50 unseen patients spanning scanners and histological variants,
 including difficult non-neoplastic tissue.
 """)),
         ("h", "Data and code availability"),
-        ("mono", "Package     pip install omicoretumordetector\n"
+        ("mono", 'Install     pip install "git+https://github.com/OmiCore-Japan/omicoretumordetector.git"\n'
                  "Source      github.com/OmiCore-Japan/omicoretumordetector  (Apache-2.0)\n"
                  "Model       omicore-tumordetector-crc-he-v0.1\n"
                  "Training    NCT-CRC-HE-100K  doi:10.5281/zenodo.1214456  CC-BY-4.0\n"
