@@ -86,7 +86,10 @@ If that succeeds, anyone can use the package.
 
 ---
 
-# Publishing to PyPI (optional)
+# Publishing to PyPI
+
+> Published: https://pypi.org/project/omicoretumordetector/ (v0.1.0).
+> The steps below are kept for future releases.
 
 `pip install omicoretumordetector` instead of a git URL. The package metadata already
 passes `twine check`, and the name `omicoretumordetector` was free as of this writing.

@@ -23,15 +23,17 @@ Full write-up: [`OmiCoreTumorDetector_preprint.pdf`](OmiCoreTumorDetector_prepri
 
 ## 1. Install
 
-This package is **not on PyPI**. Install it from this repository.
+```bash
+pip install omicoretumordetector
+```
 
-### Option A — install directly from GitHub (simplest)
+Or install the latest code straight from GitHub:
 
 ```bash
 pip install "git+https://github.com/OmiCore-Japan/omicoretumordetector.git"
 ```
 
-### Option B — clone, then install
+Or clone it for development:
 
 ```bash
 git clone https://github.com/OmiCore-Japan/omicoretumordetector.git
