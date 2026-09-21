@@ -1,4 +1,4 @@
-"""OmiCoreTumor -- tumour-region mapping for colorectal cancer H&E.
+"""OmiCoreTumorDetector -- tumour-region mapping for colorectal cancer H&E.
 
 RESEARCH USE ONLY. Not a diagnostic device; not validated for clinical use.
 

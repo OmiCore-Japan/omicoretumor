@@ -1,4 +1,4 @@
-# OmiCoreTumor
+# OmiCoreTumorDetector
 
 **Tumour-region mapping for colorectal cancer H&E histopathology.**
 
@@ -16,7 +16,7 @@ that open directly in QuPath.
 | Normal controls | 0.08% and 1.82%; **zero** tumour regions exported |
 | Molecular agreement | **AUROC 0.9855** vs Visium HD transcriptomics (Cancer_P1) |
 
-Full write-up: [`OmiCoreTumor_preprint.pdf`](OmiCoreTumor_preprint.pdf) ·
+Full write-up: [`OmiCoreTumorDetector_preprint.pdf`](OmiCoreTumorDetector_preprint.pdf) ·
 [`MODEL_CARD.md`](MODEL_CARD.md) · [`FINDINGS.md`](FINDINGS.md)
 
 ---
@@ -239,7 +239,7 @@ tests/                 pytest suite (runs without weights)
 training/              full training + evaluation code, reproduces everything
 docs/                  per-section result figures
 scripts/               helper to stage locally trained weights
-OmiCoreTumor_preprint.pdf          manuscript, 4 multipanel figures
+OmiCoreTumorDetector_preprint.pdf  manuscript, 4 multipanel figures
 CRC_tumour_detection_report.pdf    per-section performance report
 MODEL_CARD.md          intended use, training data, metrics, failure modes
 FINDINGS.md            development log: what worked, what was rejected, bugs found

@@ -1,4 +1,4 @@
-"""Build the OmiCoreTumor preprint PDF (bioRxiv style) with 4 multipanel figures."""
+"""Build the OmiCoreTumorDetector preprint PDF (bioRxiv style) with 4 multipanel figures."""
 import json
 from pathlib import Path
 
@@ -534,7 +534,7 @@ def page_title(pdf, d):
     tum = [secs[s]["area"] for s, t in SECTIONS if t == "tumour"]
     nor = [secs[s]["area"] for s, t in SECTIONS if t == "normal"]
     text_page(pdf, [
-        ("title", "OmiCoreTumor: an open, molecularly validated model for mapping\n"
+        ("title", "OmiCoreTumorDetector: an open, molecularly validated model for mapping\n"
                   "tumour regions in colorectal cancer H&E sections"),
         ("sub", "OmiCore Inc."),
         ("gap", "0.012"),
@@ -544,7 +544,7 @@ def page_title(pdf, d):
         ("p", W(f"""
 Selecting tumour regions on haematoxylin and eosin (H&E) sections is a routine
 prerequisite for spatial-omics experiments, yet it is usually done by hand and is
-rarely reproducible between operators. We present OmiCoreTumor
+rarely reproducible between operators. We present OmiCoreTumorDetector
 (omicoretumor-crc-he-v0.1), an openly licensed model that maps tumour-enriched
 regions in colorectal H&E and exports them directly as QuPath-readable
 annotations.
@@ -664,7 +664,7 @@ sensitivity {mol['recall']:.3f} and specificity {mol['specificity']:.3f} at the
 released threshold. Every model variant was scored the same way and the released
 ensemble ranked highest (Fig. 4f).
 """)),
-    ], header="OmiCoreTumor — preprint")
+    ], header="OmiCoreTumorDetector — preprint")
 
 
 def page_methods(pdf, d):
@@ -720,7 +720,7 @@ variants, two held-out benchmarks, the section-level dry test and the molecular
 comparison - and is resumable. The development log, including approaches we
 tested and rejected, is in FINDINGS.md.
 """)),
-    ], header="OmiCoreTumor — preprint")
+    ], header="OmiCoreTumorDetector — preprint")
 
 
 def page_discussion(pdf, d):
@@ -800,12 +800,12 @@ H&E image dataset for image segmentation tasks. Front Med (2023).
 Oliveira MF, Romero JP, Chung M, et al. High-definition spatial transcriptomic
 profiling of immune cell populations in colorectal cancer. Nat Genet (2025).
 """)),
-    ], header="OmiCoreTumor — preprint")
+    ], header="OmiCoreTumorDetector — preprint")
 
 
 def main():
     d = load()
-    out = R / "OmiCoreTumor_preprint.pdf"
+    out = R / "OmiCoreTumorDetector_preprint.pdf"
     with PdfPages(out) as pdf:
         page_title(pdf, d)
         page_intro_results(pdf, d)
@@ -816,7 +816,7 @@ def main():
         page_methods(pdf, d)
         page_discussion(pdf, d)
         i = pdf.infodict()
-        i["Title"] = ("OmiCoreTumor: an open, molecularly validated model for mapping "
+        i["Title"] = ("OmiCoreTumorDetector: an open, molecularly validated model for mapping "
                       "tumour regions in colorectal cancer H&E sections")
         i["Author"] = "OmiCore Inc."
         i["Subject"] = "Computational pathology preprint"

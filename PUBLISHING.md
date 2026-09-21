@@ -9,7 +9,7 @@ which are too large for git.
 cd omicoretumor-package
 git init
 git add .
-git commit -m "OmiCoreTumor v0.1.0 - CRC tumour-region mapping from H&E"
+git commit -m "OmiCoreTumorDetector v0.1.0 - CRC tumour-region mapping from H&E"
 git branch -M main
 git remote add origin https://github.com/<YOUR-ORG>/omicoretumordetector.git
 git push -u origin main

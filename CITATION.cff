@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "OmiCoreTumor: tumour-region mapping for colorectal cancer H&E"
+title: "OmiCoreTumorDetector: tumour-region mapping for colorectal cancer H&E"
 message: "If you use this software, please cite it and the underlying datasets listed in NOTICE."
 type: software
 authors:
