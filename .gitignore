@@ -1,0 +1,20 @@
+# Model weights: too large for git, shipped as GitHub release assets.
+# See PUBLISHING.md
+release_assets/*.pt
+*.pt
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# Outputs
+omicoretumor_out/
+*.npz
+*.geojson

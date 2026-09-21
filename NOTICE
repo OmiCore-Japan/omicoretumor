@@ -1,0 +1,49 @@
+OmiCoreTumor
+Copyright 2026 OmiCore Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+THIRD-PARTY DATA AND MODEL ATTRIBUTION
+================================================================================
+
+The released model weights are derivative works of the following openly
+licensed datasets. All are CC-BY-4.0, which permits commercial use with
+attribution. Attribution is reproduced here as required.
+
+1. NCT-CRC-HE-100K, NCT-CRC-HE-100K-NONORM and CRC-VAL-HE-7K
+   Kather JN, Halama N, Marx A (2018).
+   "100,000 histological images of human colorectal cancer and healthy tissue."
+   Zenodo. https://doi.org/10.5281/zenodo.1214456
+   Licence: CC-BY-4.0
+
+2. Collection of textures in colorectal cancer histology (Kather-2016)
+   Kather JN, Weis C-A, Bianconi F, et al. (2016).
+   Zenodo. https://doi.org/10.5281/zenodo.53169
+   Licence: CC-BY-4.0
+
+3. EBHI-SEG
+   Shi L, Li C, Hu W, et al. (2022).
+   "EBHI-Seg: A Novel Enteroscope Biopsy Histopathological Haematoxylin and
+   Eosin Image Dataset for Image Segmentation Tasks."
+   figshare. https://doi.org/10.6084/m9.figshare.21540159
+   Licence: CC-BY-4.0
+   (used only for the auxiliary segmentation model)
+
+Pretrained backbone weights are obtained via `timm`
+(https://github.com/huggingface/pytorch-image-models), Apache-2.0:
+  - convnext_tiny.fb_in22k_ft_in1k        (Apache-2.0)
+  - tf_efficientnetv2_s.in21k_ft_in1k     (Apache-2.0)
+  - resnet34.a1_in1k                      (Apache-2.0)
+
+================================================================================
+INTENDED USE
+================================================================================
+
+RESEARCH USE ONLY. This software is not a medical device, has not been
+cleared or approved by any regulatory authority, and must not be used for
+diagnosis, treatment decisions, or any clinical purpose.

@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omicoretumor"
+version = "0.1.0"
+description = "Tumour-region mapping for colorectal cancer H&E histopathology. Research use only."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "OmiCore Inc" }]
+keywords = ["histopathology", "colorectal-cancer", "digital-pathology",
+            "computational-pathology", "h-and-e", "spatial-transcriptomics"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+  "Topic :: Scientific/Engineering :: Image Recognition",
+]
+dependencies = [
+  "torch>=2.0",
+  "timm>=0.9",
+  "numpy>=1.23",
+  "pillow>=9.0",
+  "opencv-python-headless>=4.7",
+  "tqdm>=4.65",
+  "requests>=2.28",
+]
+
+[project.optional-dependencies]
+viz = ["matplotlib>=3.6"]
+dev = ["pytest>=7", "ruff>=0.1"]
+all = ["omicoretumor[viz,dev]"]
+
+[project.scripts]
+omicoretumor = "omicoretumor.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/OmiCore-Japan/omicoretumor"
+Issues = "https://github.com/OmiCore-Japan/omicoretumor/issues"
+
+[tool.setuptools.packages.find]
+include = ["omicoretumor*"]
+
+[tool.ruff]
+line-length = 95

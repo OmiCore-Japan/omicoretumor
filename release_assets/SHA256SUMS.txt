@@ -1,0 +1,4 @@
+0e05236c00b662eb807f87548ebecae029a511dbf65fe148046ad87c487e8da5  omicoretumor-crc-he-convnext-nonorm-v0.1.pt
+e04e8a1404d1a15b2d9bf0130d63c64ba48d01c343221382772f0a4ef7e99f41  omicoretumor-crc-he-convnext-norm-v0.1.pt
+3fb935faa7b519995cec8a343abfa220f470c2d41e42e84246bbf185964be3b3  omicoretumor-crc-he-effnetv2-nonorm-v0.1.pt
+330333c59d35b980df1d47a65f12dbd310feed853e4039322eae80f378e9049b  omicoretumor-crc-he-seg-unet-v0.1.pt

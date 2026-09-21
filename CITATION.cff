@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: "OmiCoreTumor: tumour-region mapping for colorectal cancer H&E"
+message: "If you use this software, please cite it and the underlying datasets listed in NOTICE."
+type: software
+authors:
+  - name: "OmiCore Inc."
+version: 0.1.0
+license: Apache-2.0
+repository-code: "https://github.com/OmiCore-Japan/omicoretumor"
+keywords:
+  - computational pathology
+  - colorectal cancer
+  - histopathology
+  - spatial transcriptomics
+references:
+  - type: dataset
+    title: "100,000 histological images of human colorectal cancer and healthy tissue"
+    authors:
+      - family-names: Kather
+        given-names: Jakob Nikolas
+      - family-names: Halama
+        given-names: Niels
+      - family-names: Marx
+        given-names: Alexander
+    year: 2018
+    doi: "10.5281/zenodo.1214456"
