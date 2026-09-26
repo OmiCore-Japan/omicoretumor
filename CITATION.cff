@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 title: "OmiCoreTumorDetector: tumour-region mapping for colorectal cancer H&E"
-message: "If you use this software, please cite it and the underlying datasets listed in NOTICE."
+message: "If you use this software, please cite the preprint below (preferred-citation), and the underlying datasets listed in NOTICE."
 type: software
 authors:
   - name: "OmiCore Inc."
@@ -12,8 +12,23 @@ keywords:
   - colorectal cancer
   - histopathology
   - spatial transcriptomics
+preferred-citation:
+  type: article
+  title: "OmiCoreTumorDetector: an open, molecularly validated model for mapping tumour regions in colorectal cancer H&E sections"
+  authors:
+    - family-names: Niwase
+      given-names: Shamim
+    - family-names: Fujiyama
+      given-names: Akihisa
+  journal: bioRxiv
+  year: 2026
+  month: 9
+  number: "2026.09.21.753083"
+  doi: "10.64898/2026.09.21.753083"
+  url: "https://doi.org/10.64898/2026.09.21.753083"
+  status: preprint
 references:
-  - type: dataset
+  - type: data
     title: "100,000 histological images of human colorectal cancer and healthy tissue"
     authors:
       - family-names: Kather

@@ -1,5 +1,7 @@
 # Model card — omicore-tumordetector-crc-he-v0.1
 
+Described in: Niwase S, Fujiyama A. **OmiCoreTumorDetector: an open, molecularly validated model for mapping tumour regions in colorectal cancer H&E sections.** *bioRxiv* 2026.09.21.753083 (2026). doi: [10.64898/2026.09.21.753083](https://doi.org/10.64898/2026.09.21.753083)
+
 ## Overview
 
 | | |
@@ -103,3 +105,11 @@ identifiers are present in the weights or this repository.
 Datasets and pretrained backbone licences are listed in [`NOTICE`](NOTICE).
 Full development log, including rejected approaches and bugs found, is in
 [`FINDINGS.md`](FINDINGS.md).
+
+## Citation
+
+If you use this model, please cite:
+
+> Niwase S, Fujiyama A. **OmiCoreTumorDetector: an open, molecularly validated model for mapping tumour regions in colorectal cancer H&E sections.** *bioRxiv* 2026.09.21.753083 (2026). doi: [10.64898/2026.09.21.753083](https://doi.org/10.64898/2026.09.21.753083)
+
+BibTeX: see [`README.md`](README.md#10-citation-and-licence) or run `omicoretumordetector cite --bibtex`.

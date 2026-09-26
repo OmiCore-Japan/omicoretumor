@@ -87,6 +87,8 @@ def _predict(a):
                                 tile=res["tile"], scale=res["scale"])
     (out / "summary.json").write_text(json.dumps(rows, indent=2))
     print(f"\nwrote {out}/")
+    print("If you use these results, please cite doi:10.64898/2026.09.21.753083 "
+          "(run `omicoretumordetector cite` for the full reference).")
 
 
 def _models(a):
@@ -101,6 +103,11 @@ def _models(a):
     print(f"\ncache: {cache_dir()}")
 
 
+def _cite(a):
+    from . import __bibtex__, __citation__
+    print(__bibtex__ if a.bibtex else __citation__)
+
+
 def _clear(a):
     from .weights import clear_cache
     print(f"freed {clear_cache()/1e6:.0f} MB")
@@ -109,7 +116,9 @@ def _clear(a):
 def main(argv=None):
     p = argparse.ArgumentParser(
         prog="omicoretumordetector",
-        description="Tumour-region mapping for colorectal H&E. RESEARCH USE ONLY.")
+        description="Tumour-region mapping for colorectal H&E. RESEARCH USE ONLY.",
+        epilog="If you use this tool, please cite doi:10.64898/2026.09.21.753083 "
+               "(`omicoretumordetector cite`).")
     p.add_argument("--version", action="store_true")
     sub = p.add_subparsers(dest="cmd")
 
@@ -132,6 +141,9 @@ def main(argv=None):
     r.set_defaults(func=_predict)
 
     sub.add_parser("models", help="list available and cached weights").set_defaults(func=_models)
+    c = sub.add_parser("cite", help="print the reference to cite when using this package")
+    c.add_argument("--bibtex", action="store_true", help="print as BibTeX")
+    c.set_defaults(func=_cite)
     sub.add_parser("clear-cache", help="delete downloaded weights").set_defaults(func=_clear)
 
     a = p.parse_args(argv)

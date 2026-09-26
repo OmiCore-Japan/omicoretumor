@@ -41,6 +41,7 @@ omicoretumordetector = "omicoretumordetector.cli:main"
 [project.urls]
 Homepage = "https://github.com/OmiCore-Japan/omicoretumordetector"
 Issues = "https://github.com/OmiCore-Japan/omicoretumordetector/issues"
+Paper = "https://doi.org/10.64898/2026.09.21.753083"
 
 [tool.setuptools.packages.find]
 include = ["omicoretumordetector*"]

@@ -14,6 +14,14 @@ def test_exports_and_classes():
     assert ot.DEFAULT_MODEL in ot.ENSEMBLES
 
 
+def test_citation(capsys):
+    from omicoretumordetector.cli import main
+    assert "10.64898/2026.09.21.753083" in ot.__citation__
+    assert ot.__bibtex__.startswith("@article{") and "10.64898/2026.09.21.753083" in ot.__bibtex__
+    assert main(["cite"]) == 0 and "Fujiyama" in capsys.readouterr().out
+    assert main(["cite", "--bibtex"]) == 0 and "@article{" in capsys.readouterr().out
+
+
 def test_tile_grid_covers_edges():
     xs, ys = tile_grid(1000, 500, 224, 224)
     assert xs[0] == 0 and ys[0] == 0

@@ -16,8 +16,12 @@ that open directly in QuPath.
 | Normal controls | 0.08% and 1.82%; **zero** tumour regions exported |
 | Molecular agreement | **AUROC 0.9855** vs Visium HD transcriptomics (Cancer_P1) |
 
-Full write-up: [`OmiCoreTumorDetector_preprint.pdf`](OmiCoreTumorDetector_preprint.pdf) ·
-[`MODEL_CARD.md`](MODEL_CARD.md) · [`FINDINGS.md`](FINDINGS.md)
+**Paper:** Niwase S, Fujiyama A. **OmiCoreTumorDetector: an open, molecularly validated model for mapping tumour regions in colorectal cancer H&E sections.** *bioRxiv* 2026.09.21.753083 (2026). doi: [10.64898/2026.09.21.753083](https://doi.org/10.64898/2026.09.21.753083)
+
+📌 **If you use this package, please cite the paper above** (see [§10](#10-citation-and-licence)
+for BibTeX, or run `omicoretumordetector cite`).
+
+More: [`MODEL_CARD.md`](MODEL_CARD.md) · [`FINDINGS.md`](FINDINGS.md)
 
 ---
 
@@ -241,7 +245,7 @@ tests/                 pytest suite (runs without weights)
 training/              full training + evaluation code, reproduces everything
 docs/                  per-section result figures
 scripts/               helper to stage locally trained weights
-OmiCoreTumorDetector_preprint.pdf  manuscript, 4 multipanel figures
+OmiCoreTumorDetector_preprint.pdf  early technical write-up (the peer-citable version is the bioRxiv preprint)
 CRC_tumour_detection_report.pdf    per-section performance report
 MODEL_CARD.md          intended use, training data, metrics, failure modes
 FINDINGS.md            development log: what worked, what was rejected, bugs found
@@ -271,6 +275,29 @@ bash training/run_experiments.sh
 ---
 
 ## 10. Citation and licence
+
+If you use OmiCoreTumorDetector (the package, the command line tool, or the model
+weights) in your work, please cite:
+
+> Niwase S, Fujiyama A. **OmiCoreTumorDetector: an open, molecularly validated model for mapping tumour regions in colorectal cancer H&E sections.** *bioRxiv* 2026.09.21.753083 (2026). doi: [10.64898/2026.09.21.753083](https://doi.org/10.64898/2026.09.21.753083)
+
+```bibtex
+@article{niwase2026omicoretumordetector,
+  title   = {{OmiCoreTumorDetector}: an open, molecularly validated model for mapping
+             tumour regions in colorectal cancer {H\&E} sections},
+  author  = {Niwase, Shamim and Fujiyama, Akihisa},
+  journal = {bioRxiv},
+  year    = {2026},
+  pages   = {2026.09.21.753083},
+  doi     = {10.64898/2026.09.21.753083},
+  url     = {https://doi.org/10.64898/2026.09.21.753083},
+  note    = {Preprint}
+}
+```
+
+The same reference is available from `omicoretumordetector cite` (add `--bibtex`),
+from `omicoretumordetector.__citation__` in Python, and through GitHub's
+"Cite this repository" button, which reads [`CITATION.cff`](CITATION.cff).
 
 Code is Apache-2.0. Weights are derivative works of CC-BY-4.0 datasets — if you
 use them you must also credit Kather et al. (2018, 2016) and, for the
